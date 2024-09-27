@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+       <div class="container">
+        <nav>
+            <img src="img/LakshiKugan.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hi, I'm <span>Lakshini</span> <br> Kuganandamurthy</h1>
+        </div>
+       </div>     
+    </div>
+    <!-------About------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/portfolio_bg_2.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>A versatile and dedicated IT professional with a solid foundation in software development and network engineering. 
+                        I have a strong technical background and enjoy solving problems, whether it's developing software, managing networks, or helping others with technical issues. I work well with different teams and can adapt to various roles, making me a valuable addition to any organization. I am eager to leverage my skills and experience and looking forward to contributing to innovative projects and support critical IT functions.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python</span><br>Backend Development</li>
+                            <li><span>HTML/CSS3/TailorwindCSS/JS</span><br>Web App Development</li>
+                            <li><span>Flutter</span><br>Mobile App Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Developer | AI Training and Code Annotation at DataAnnotation.tech, Australia</li>
+                            <li><span>2021 - 2023</span><br>Associate Software Engineer at Virtusa, Sri Lanka</li>
+                            <li><span>2020 - 2021</span><br>Intern Software Engineer at Digital Microservices, Sri Lanka</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><br>MSc ICT at La Trobe University, Australia</li>
+                            <li><span>2021</span><br>BSc IT (Hons) at SLIIT, Sri Lanka </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
