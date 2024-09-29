@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/796f4f01a1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
        <div class="container">
         <nav>
             <img src="img/LakshiKugan.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>Software Engineer</p>
@@ -35,8 +38,10 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>A versatile and dedicated IT professional with a solid foundation in software development and network engineering. 
-                        I have a strong technical background and enjoy solving problems, whether it's developing software, managing networks, or helping others with technical issues. I work well with different teams and can adapt to various roles, making me a valuable addition to any organization. I am eager to leverage my skills and experience and looking forward to contributing to innovative projects and support critical IT functions.
+                    <p>A versatile and dedicated IT professional with a solid foundation in software development and network engineering. <br>
+                        I have a strong technical background and enjoy solving problems, whether it's developing software, managing networks, or helping others with technical issues. <br>
+                        I work well with different teams and can adapt to various roles, making me a valuable addition to any organization. <br>
+                        I am eager to leverage my skills and experience and looking forward to contributing to innovative projects and support critical IT functions.
                     </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -69,6 +74,113 @@
             </div>
         </div>
     </div>
+    <!----Projects------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">I'm capable of</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <h2>Python Data Analysis</h2>
+                    <p>I am good at working with Python pandas frameworks. </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I am good at developing web application interfaces and capable of cloning designs to detail. </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>Mobile App Development</h2>
+                    <p>I am very much interested in developing eye catching interfaces for android applications and integrating backend with Firebase. </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------Portfolio----------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <div class="img_container">
+                        <img src="img/work_1.jpeg">
+                    </div>
+                    <div class="layer">
+                        <h3>Quiz App</h3>
+                        <p>This is an Android quiz application, I practiced building, to learn the basics of Flutter/Dart</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="image_container">
+                    <img src="img/work_5.png">
+                </div>
+                    <div class="layer">
+                        <h3>Acme Rockets</h3>
+                        <p>This is a website, I practiced building, to learn the basics of Tailorwindcss</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="image_container">
+                    <img src="img/work_6.png">
+                </div>
+                    <div class="layer">
+                        <h3>InstantLocate</h3>
+                        <p>This is a location based Android application, to suggest services to users based on their location</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="image_container">     
+                    <img src="img/work_4.jpeg">
+                    </div>
+                    <div class="layer">
+                        <h3>Quotes App</h3>
+                        <p>This is an Android Application developed in Flutter/Dart that displays new quotes each day</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a> 
+        </div>
+    </div>
+
+    <!----contact------------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-arrow-up-right-from-square"></i>lakshinikuganandamurthy@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>0414500648</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/lakshini-kuganandamurthy-597314173/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Lakshikuga"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://medium.com/@lakkuga"><i class="fa-brands fa-medium"></i></a>
+                    </div>
+                    <a href="img/CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name ="submit-to-google-sheet">
+                    <input type="text"  name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>    
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Lakshini Kuganandamurthy</p>
+
+        </div>
+    </div>
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
@@ -84,6 +196,38 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+
+
     </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby6-DEWodvemmlA4LO0nOTp772kkX5szHnQj_cAibDYVFGUs0pBDMAnafimrSxjvCx3/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
